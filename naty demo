@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProTrade Academy | Demo Terminal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-nav">
+        <div class="logo">PRO<span>TRADE</span></div>
+        <nav>
+            <ul>
+                <li><a href="#learn">Learn</a></li>
+                <li><a href="#indicators">Indicators</a></li>
+                <li><a href="#demo">Live Demo</a></li>
+            </ul>
+        </nav>
+        <div class="user-profile">Account: $10,000 (Demo)</div>
+    </header>
+
+    <main class="dashboard-container">
+        
+        <aside class="sidebar">
+            <section class="asset-selector">
+                <h3>Market Watch</h3>
+                <div class="asset-item" data-pair="BTCUSD">BTC/USD <span class="up">+2.4%</span></div>
+                <div class="asset-item" data-pair="EURUSD">EUR/USD <span class="down">-0.5%</span></div>
+                <div class="asset-item" data-pair="GOLD">GOLD <span class="up">+1.1%</span></div>
+            </section>
+
+            <section class="indicator-toolset">
+                <h3>Technical Tools</h3>
+                <button onclick="addIndicator('MA')">Moving Average</button>
+                <button onclick="addIndicator('RSI')">RSI</button>
+                <button onclick="addIndicator('MACD')">MACD</button>
+            </section>
+        </aside>
+
+        <section class="chart-area">
+            <div class="chart-header">
+                <h2>BTC/USD <small>1H Chart</small></h2>
+            </div>
+            <div id="main-chart-canvas"></div>
+            
+            <div class="educational-overlay">
+                <h4>Analysis Tip:</h4>
+                <p id="tip-text">The current candle shows a <strong>Hammer</strong> pattern, suggesting a potential bullish reversal.</p>
+            </div>
+        </section>
+
+        <article class="info-panel">
+            <h3>Deep Dive: The RSI</h3>
+            <p>The <strong>Relative Strength Index (RSI)</strong> measures the speed and change of price movements. 
+               Formula: $$RSI = 100 - \left[ \frac{100}{1 + \frac{Average Gain}{Average Loss}} \right]$$
+            </p>
+            <div class="indicator-visual-demo">
+                
+
+[Image of RSI indicator chart with overbought and oversold levels]
+
+            </div>
+        </article>
+
+    </main>
+
+    <footer class="status-bar">
+        <span>Market Status: Open</span>
+        <span>Latency: 24ms</span>
+    </footer>
+
+</body>
+</html>
